@@ -9,7 +9,7 @@ type Books struct {
 	gorm.Model 
 	Title string  `valid:"alpha,stringlength(3|100)"`
 	Price float64 `valid:"range(50|500)"`
-	Code  string  `valid:"matches(^[BK][0-9]{6}$)"`
+	Code  string  `valid:"matches(^[B][K][0-9]{6}$)"`
 }
 
 func (b Books) Validate() error {
